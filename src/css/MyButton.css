@@ -1,0 +1,26 @@
+.MyButton {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+  padding: 10px 25px;
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: "Nanum Pen Script";
+}
+
+.MyButton-default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton-positive {
+  background-color: #64c964;
+  color: white;
+}
+
+.MyButton-negative {
+  background-color: #fd565f;
+  color: white;
+}

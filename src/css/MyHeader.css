@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+
+  font-family: "Nanum Pen Script";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.head-text,
+.head-btn__left,
+.head-btn__right {
+  width: 33%;
+}
+
+.head-text {
+  display: flex;
+  justify-content: center;
+
+  font-size: 30px;
+}
+
+.head-btn__right {
+  display: flex;
+  justify-content: flex-end;
+}
