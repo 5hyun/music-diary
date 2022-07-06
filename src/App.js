@@ -3,10 +3,6 @@ import React, { useRef, useReducer } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// componentes
-import MyButton from "./components/MyButton";
-import MyHeader from "./components/MyHeader";
-
 import Home from "./pages/Home";
 import Music from "./pages/Music";
 import New from "./pages/New";
@@ -41,11 +37,41 @@ const reducer = (state, action) => {
   }
 };
 
-export const DiaryStateContext = React.createContext();
-export const DiaryDispatchContext = React.createContext();
+export const MusicStateContext = React.createContext();
+export const MusicDispatchContext = React.createContext();
+
+const dummyData = [
+  {
+    id: 1,
+    date: 1657075362305,
+    artist: "블락비",
+    title: "잭팟",
+    genre: "댄스",
+    emotion: 5,
+    content: "1",
+  },
+  {
+    id: 2,
+    date: 1657075362306,
+    artist: "지코",
+    title: "아무 노래",
+    genre: "랩/힙합",
+    emotion: 2,
+    content: "2",
+  },
+  {
+    id: 3,
+    date: 1657075362307,
+    artist: "잔나비",
+    title: "주저하는 연인들을 위하여",
+    genre: "인디",
+    emotion: 1,
+    content: "3",
+  },
+];
 
 function App() {
-  const [data, dispatch] = useReducer(reducer, []);
+  const [data, dispatch] = useReducer(reducer, dummyData);
 
   const dataId = useRef(0);
 
@@ -84,20 +110,20 @@ function App() {
   };
 
   return (
-    <DiaryStateContext.Provider value={data}>
-      <DiaryDispatchContext.Provider value={(onCreate, onEdit, onRemove)}>
+    <MusicStateContext.Provider value={data}>
+      <MusicDispatchContext.Provider value={(onCreate, onEdit, onRemove)}>
         <BrowserRouter>
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="music" element={<Music />} />
+              <Route path="/music" element={<Music />} />
               <Route path="/new" element={<New />} />
               <Route path="/edit" element={<Edit />} />
             </Routes>
           </div>
         </BrowserRouter>
-      </DiaryDispatchContext.Provider>
-    </DiaryStateContext.Provider>
+      </MusicDispatchContext.Provider>
+    </MusicStateContext.Provider>
   );
 }
 

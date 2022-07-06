@@ -1,0 +1,32 @@
+.MusicList-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.MusicList-menu .ControlMenu {
+  font-family: "Nanum Pen Script";
+  font-size: 22px;
+  text-align: center;
+
+  border: none;
+  background-color: #ececec;
+  width: 45%;
+  border-radius: 5px;
+}
+
+.MusicList-menu__left {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.MusicList-menu__right {
+  width: 50%;
+  text-align: center;
+}
+
+.MusicList-menu__right button {
+  width: 100%;
+}

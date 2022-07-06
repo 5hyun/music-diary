@@ -1,0 +1,55 @@
+.MusicItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "Nanum Pen Script";
+  font-size: 22px;
+}
+
+.MusicItem-album {
+  width: 20%;
+}
+
+.MusicItem-info-detail {
+  width: 25%;
+}
+
+.MusicItem-info__date {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.MusicItem-info__title {
+  font-size: 23px;
+}
+
+.MusicItem-info__artist {
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.MusicItem-info__genre,
+.MusicItem_info__emotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MusicItem-info__genre {
+  width: 20%;
+  opacity: 0.4;
+}
+
+.MusicItem_info__emotion {
+  width: 15%;
+}
+
+.MusicItem_info__emotion img {
+  min-width: 50px;
+  height: 50px;
+}
