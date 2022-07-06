@@ -12,10 +12,12 @@
 
 .MusicItem-album {
   width: 20%;
+  cursor: pointer;
 }
 
 .MusicItem-info-detail {
   width: 25%;
+  cursor: pointer;
 }
 
 .MusicItem-info__date {

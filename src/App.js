@@ -116,9 +116,9 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/music" element={<Music />} />
+              <Route path="/music/:id" element={<Music />} />
               <Route path="/new" element={<New />} />
-              <Route path="/edit" element={<Edit />} />
+              <Route path="/edit/:id" element={<Edit />} />
             </Routes>
           </div>
         </BrowserRouter>

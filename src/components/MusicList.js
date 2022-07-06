@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MusicItem from "./MusicItem";
 import MyButton from "./MyButton";
 
@@ -34,6 +35,8 @@ const ControlMenu = ({ value, onChange, optionList }) => {
 };
 
 const MusicList = ({ musicList }) => {
+  const navigate = useNavigate();
+
   const [genreType, setGenreType] = useState("synthesis");
   const [filter, setFillter] = useState("all");
 
@@ -71,7 +74,9 @@ const MusicList = ({ musicList }) => {
     return sortedList;
   };
 
-  console.log(getProcesseMusicList());
+  const goNew = () => {
+    navigate(`/new`);
+  };
 
   return (
     <div className="MusicList">
@@ -91,7 +96,7 @@ const MusicList = ({ musicList }) => {
           />
         </div>
         <div className="MusicList-menu__right">
-          <MyButton type={"positive"} text={"새 일기쓰기"} onClick={() => {}} />
+          <MyButton onClick={goNew} type={"positive"} text={"새 일기쓰기"} />
         </div>
       </div>
       {getProcesseMusicList().map((it) => (

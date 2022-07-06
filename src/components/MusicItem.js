@@ -1,13 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import MyButton from "./MyButton";
 
 const MusicItem = ({ id, date, artist, title, genre, emotion, content }) => {
   const strDate = new Date(parseInt(date)).toLocaleDateString();
+  const navigate = useNavigate();
+
+  const goDiary = () => {
+    navigate(`/dairy/${id}`);
+  };
+
+  const goEdit = () => {
+    navigate(`/edit/${id}`);
+  };
 
   return (
     <div className="MusicItem">
-      <div className="MusicItem-album">여긴 사진</div>
+      <div onClick={goDiary} className="MusicItem-album">
+        여긴 사진
+      </div>
 
-      <div className="MusicItem-info-detail">
+      <div onClick={goDiary} className="MusicItem-info-detail">
         <div className="MusicItem-info__date">{strDate}</div>
         <div className="MusicItem-info__title">{title.slice(0, 25)}</div>
         <div className="MusicItem-info__artist">{artist.slice(0, 25)}</div>
@@ -20,7 +32,7 @@ const MusicItem = ({ id, date, artist, title, genre, emotion, content }) => {
       </div>
 
       <div className="MusicItem-editButton">
-        <MyButton text={"수정하기"} />
+        <MyButton onClick={goEdit} text={"수정하기"} />
       </div>
     </div>
   );
