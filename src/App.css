@@ -6,6 +6,7 @@
 @import "./css/components/MyHeader.css";
 @import "./css/components/MusicList.css";
 @import "./css/components/MusicItem.css";
+@import "./css/components/MusicEditor.css";
 
 .App {
   padding: 20px;

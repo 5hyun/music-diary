@@ -21,14 +21,22 @@ const MusicItem = ({ id, date, artist, title, genre, emotion, content }) => {
 
       <div onClick={goDiary} className="MusicItem-info-detail">
         <div className="MusicItem-info__date">{strDate}</div>
-        <div className="MusicItem-info__title">{title.slice(0, 25)}</div>
-        <div className="MusicItem-info__artist">{artist.slice(0, 25)}</div>
+        <div className="MusicItem-info__title">{title.slice(0, 14)}</div>
+        <div className="MusicItem-info__artist">{artist.slice(0, 14)}</div>
       </div>
 
       <div className="MusicItem-info__genre">{genre}</div>
 
-      <div className="MusicItem_info__emotion">
-        <img src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`} />
+      <div
+        className={[
+          "MusicItem_info__emotion",
+          `emotion_img_warapper_${emotion}`,
+        ].join(" ")}
+      >
+        <img
+          src={process.env.PUBLIC_URL + `assets/emotion${emotion}.png`}
+          alt="이미지"
+        />
       </div>
 
       <div className="MusicItem-editButton">

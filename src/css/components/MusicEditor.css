@@ -1,0 +1,122 @@
+/* 오늘은 언제인가요 */
+.MusicEditor {
+  font-family: "Nanum Pen Script";
+}
+
+.DateSelctor h4 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.DateSelctor-date {
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 23px;
+  font-family: "Nanum Pen Script";
+  cursor: pointer;
+}
+
+/* 오늘의 감정 */
+.todayEmotion {
+  margin-top: 30px;
+}
+
+.todayEmotion h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.todayEmotion-input {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 2%;
+}
+
+.EmotionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todayEmotion-input {
+  cursor: pointer;
+}
+
+.todayEmotion-input img {
+  height: 80px;
+  min-width: 50px;
+  margin-bottom: 15px;
+}
+
+.EmotionItem {
+  padding: 12px 0;
+  border-radius: 5px;
+}
+
+.EmotionItem_off {
+  background-color: #ececec;
+}
+
+.EmotionItem_on_1 {
+  background-color: #64c964;
+  color: white;
+}
+
+.EmotionItem_on_2 {
+  background-color: #9dd772;
+  color: white;
+}
+
+.EmotionItem_on_3 {
+  background-color: #fdce17;
+  color: white;
+}
+
+.EmotionItem_on_4 {
+  background-color: #fd8446;
+  color: white;
+}
+
+.EmotionItem_on_5 {
+  background-color: #fd565f;
+  color: white;
+}
+
+/* 음악평 */
+.Content h4,
+.Title h4,
+.Artist h4 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.Content-input textarea {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+  resize: vertical;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding: 20px;
+
+  font-size: 20px;
+  font-family: "Nanum Pen Script";
+}
+
+/* 제목, 가수 */
+.Title input,
+.Artist input {
+  border: none;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 10px;
+
+  min-width: 160px;
+  height: 23px;
+}

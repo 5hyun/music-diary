@@ -47,8 +47,42 @@
   opacity: 0.4;
 }
 
+@keyframes emotionGood {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes emotionBad {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .MusicItem_info__emotion {
   width: 15%;
+}
+
+.emotion_img_warapper_1,
+.emotion_img_warapper_2 {
+  animation: emotionGood 1s ease-in-out infinite;
+}
+
+.emotion_img_warapper_4,
+.emotion_img_warapper_5 {
+  animation: emotionBad 0.5s ease-in-out infinite;
 }
 
 .MusicItem_info__emotion img {
