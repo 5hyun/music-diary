@@ -25,16 +25,14 @@ const reducer = (state, action) => {
       newState = state.filter((it) => it.id !== action.targetId);
       break;
     }
-    case "EDIT":
-      {
-        newState = state.map((it) =>
-          it.id === action.data.id ? { ...action.data } : it
-        );
-        break;
-      }
-
-      return newState;
+    case "EDIT": {
+      newState = state.map((it) =>
+        it.id === action.data.id ? { ...action.data } : it
+      );
+      break;
+    }
   }
+  return newState;
 };
 
 export const MusicStateContext = React.createContext();
@@ -75,13 +73,12 @@ function App() {
 
   const dataId = useRef(0);
 
-  const onCreate = (date, album, artist, title, emotion, content) => {
+  const onCreate = (date, artist, title, emotion, content) => {
     dispatch({
       type: "CREATE",
       data: {
         id: dataId.current,
         date: new Date(date).getTime(),
-        album,
         artist,
         title,
         emotion,
@@ -111,7 +108,7 @@ function App() {
 
   return (
     <MusicStateContext.Provider value={data}>
-      <MusicDispatchContext.Provider value={(onCreate, onEdit, onRemove)}>
+      <MusicDispatchContext.Provider value={{ onCreate, onEdit, onRemove }}>
         <BrowserRouter>
           <div className="App">
             <Routes>

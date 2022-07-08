@@ -3,6 +3,12 @@
   font-family: "Nanum Pen Script";
 }
 
+h4 {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
 .DateSelctor h4 {
   font-size: 28px;
   margin-bottom: 10px;
@@ -21,11 +27,6 @@
 /* 오늘의 감정 */
 .todayEmotion {
   margin-top: 30px;
-}
-
-.todayEmotion h4 {
-  font-size: 20px;
-  margin-bottom: 15px;
 }
 
 .todayEmotion-input {
@@ -85,14 +86,6 @@
 }
 
 /* 음악평 */
-.Content h4,
-.Title h4,
-.Artist h4 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
 .Content-input textarea {
   width: 100%;
   min-height: 200px;
@@ -109,6 +102,17 @@
   font-family: "Nanum Pen Script";
 }
 
+/* 장르 */
+.genre-input .ControlMenu {
+  border: none;
+  padding: 10px;
+  background-color: #ececec;
+  border-radius: 5px;
+
+  font-size: 20px;
+  font-family: "Nanum Pen Script";
+}
+
 /* 제목, 가수 */
 .Title input,
 .Artist input {
@@ -117,6 +121,19 @@
   border-radius: 5px;
   padding: 10px;
 
+  font-size: 20px;
+  font-family: "Nanum Pen Script";
+
   min-width: 160px;
   height: 23px;
+}
+
+/* btn */
+.control-btn {
+  margin-top: 20px;
+}
+
+.control-btn__positon {
+  display: flex;
+  justify-content: space-between;
 }

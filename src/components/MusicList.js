@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MusicItem from "./MusicItem";
 import MyButton from "./MyButton";
+import ControlMenu from "./ControlMenu";
 
 const filterOptionList = [
   { value: "all", name: "전부다" },
@@ -17,22 +18,6 @@ const genreOptionList = [
   { value: "rnb", name: "R&B" },
   { value: "indie", name: "인디" },
 ];
-
-const ControlMenu = ({ value, onChange, optionList }) => {
-  return (
-    <select
-      className="ControlMenu"
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-    >
-      {optionList.map((it, idx) => (
-        <option key={idx} value={it.value}>
-          {it.name}
-        </option>
-      ))}
-    </select>
-  );
-};
 
 const MusicList = ({ musicList }) => {
   const navigate = useNavigate();

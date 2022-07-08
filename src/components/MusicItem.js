@@ -21,7 +21,7 @@ const MusicItem = ({ id, date, artist, title, genre, emotion, content }) => {
 
       <div onClick={goDiary} className="MusicItem-info-detail">
         <div className="MusicItem-info__date">{strDate}</div>
-        <div className="MusicItem-info__title">{title.slice(0, 14)}</div>
+        <div className="MusicItem-info__title">{title}</div>
         <div className="MusicItem-info__artist">{artist.slice(0, 14)}</div>
       </div>
 
